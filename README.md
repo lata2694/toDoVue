@@ -1,2 +1,0 @@
-# toDoVue
-CRUD in VueJS
