@@ -12,7 +12,15 @@ const app = new Vue({
                 done: false
             })
             this.newTodo = ''
-            console.log('submitted',this.todos)
+        },
+        removeToDo(todo) {
+            const todoIndex = this.todos.indexOf(todo)
+            this.todos.splice(todoIndex,1)
+        },
+        allDone () {
+            this.todos.forEach((todo)=>{
+                todo.done = true
+            })
         }
     }
 })

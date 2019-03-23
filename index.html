@@ -21,10 +21,12 @@
             <input v-model="newTodo" type="text" name="newToDo" id="newToDo" value=""/>
             <button type="submit" name="button">Add</button>
         </form>
+        <button @click="allDone" type="button" name="allDone">All Done</button>
         <ul>
             <li v-for="todo in todos">
                 <input type="checkbox" v-model="todo.done"/>
                 <span :class="{done: todo.done}">{{todo.title}}</span>
+                <button @click="removeToDo(todo)" type="button" name="remove">Remove</button>
             </li>
         </ul>
     </main>
